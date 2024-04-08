@@ -16,9 +16,12 @@ public class Test {
 	
 	BeanFactory factory= new XmlBeanFactory(resourse);
 	
+	Student s= (Student) factory.getBean("s");
+	System.out.println(s);
 	Student st = factory.getBean("proxy",Student.class);
 		 
      st.a();
+     
 	}
 
 }
